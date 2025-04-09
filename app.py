@@ -1,7 +1,9 @@
 import json
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load product data
 with open('product_data.json', 'r', encoding='utf-8') as f:
